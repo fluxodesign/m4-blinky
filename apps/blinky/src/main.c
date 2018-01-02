@@ -55,7 +55,7 @@ main(int argc, char **argv)
 
     g_led_pin = LED_BLINK_PIN;
     g_orange_pin = LED_BLINK_ORANGE;
-    hal_gpio_init_out(g_led_pin, 1);
+    hal_gpio_init_out(g_led_pin, 0);
     hal_gpio_init_out(g_orange_pin, 0);
 
     while (1) {
