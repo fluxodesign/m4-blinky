@@ -57,3 +57,6 @@ executable.  Since the simulator does not have an LED to blink, this version of
 blinky is not terribly exciting - a printed message indicating the current LED
 state.  To learn how to build blinky for actual hardware, please see the
 [Getting Started Guide](http://mynewt.apache.org/os/get_started/introduction/).
+=======
+# m4-blinky
+mynewt-stm32f4disco
