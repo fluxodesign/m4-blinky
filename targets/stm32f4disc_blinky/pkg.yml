@@ -1,0 +1,7 @@
+### Package: targets/stm32f4disc_blinky
+pkg.name: "targets/stm32f4disc_blinky"
+pkg.type: "target"
+pkg.description: 
+pkg.author: 
+pkg.homepage: 
+

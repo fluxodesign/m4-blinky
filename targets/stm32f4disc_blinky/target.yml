@@ -1,0 +1,4 @@
+### Target: targets/stm32f4disc_blinky
+target.app: "apps/blinky"
+target.bsp: "@apache-mynewt-core/hw/bsp/stm32f4discovery"
+target.build_profile: "debug"
