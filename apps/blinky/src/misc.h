@@ -5,4 +5,6 @@
 #define LED_BLINK_RED		MCU_GPIO_PORTD(14)
 #define LED_BLINK_BLUE		MCU_GPIO_PORTD(15)
 
+void cycleLed(int);
+
 #endif /* STM32F4_MISC */

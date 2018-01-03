@@ -55,38 +55,31 @@ main(int argc, char **argv)
 
     g_led_pin = LED_BLINK_PIN;
     g_orange_pin = LED_BLINK_ORANGE;
+    g_blue_pin = LED_BLINK_BLUE;
+    g_red_pin = LED_BLINK_RED;
     hal_gpio_init_out(g_led_pin, 0);
     hal_gpio_init_out(g_orange_pin, 0);
+    hal_gpio_init_out(g_blue_pin, 0);
+    hal_gpio_init_out(g_red_pin, 0);
 
     while (1) {
         ++g_task1_loops;
 
-        /* Wait one second */
-        os_time_delay(OS_TICKS_PER_SEC);
-
-        /* Toggle the LED */
-        hal_gpio_toggle(g_led_pin);
-
-		/* Wait one second */
-		os_time_delay(OS_TICKS_PER_SEC);
-
-		/* Turn off LED */
-		hal_gpio_toggle(g_led_pin);
-
-		/* Wait one second */
-		os_time_delay(OS_TICKS_PER_SEC);
-
-		/* Next LED */
-		hal_gpio_toggle(g_orange_pin);
-
-		/* Wait one second */
-		os_time_delay(OS_TICKS_PER_SEC);
-
-		/* Turn off LED */
-		hal_gpio_toggle(g_orange_pin);
+        cycleLed(g_led_pin);
+        cycleLed(g_orange_pin);
+        cycleLed(g_red_pin);
+        cycleLed(g_blue_pin);
     }
     assert(0);
 
     return rc;
+}
+
+void cycleLed(int led)
+{
+	hal_gpio_toggle(led);
+	os_time_delay(OS_TICKS_PER_SEC/5);
+	hal_gpio_toggle(led);
+	os_time_delay(OS_TICKS_PER_SEC/5);
 }
 
